@@ -4,11 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Context
 
-
-
-
-
-
 {
     //O DbContext é uma herança que vem do pacote EntityFrameworkCore
     public class AgendaContext : DbContext
@@ -20,8 +15,12 @@ namespace API.Context
 
         }
         // a entidade neste caso é tanto uma classe quanto uma tabela no banco de dados.
+
+        public DbSet<Cidade> Cidades { get; set; }
         public DbSet<Contato> Contatos { get; set; }
+        public DbSet<Espaco> Espacos { get; set; }
         public DbSet<Proprietario> Proprietarios { get; set; }
+        public DbSet<Reserva> Reservas { get; set; }
 
     }
 }
