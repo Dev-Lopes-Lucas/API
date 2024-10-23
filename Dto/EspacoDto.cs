@@ -1,9 +1,12 @@
-using System.ComponentModel.DataAnnotations;
-namespace API.Entities
+using API.Context;
+using API.Entities;
+using Microsoft.AspNetCore.Mvc;
+
+
+namespace API.Dto
 {
-    public class Espaco
+    public class EspacoDto
     {
-        [Key]
         public int IdEspaco { get; set; }
 
         public string? NomeEspaco { get; set; }

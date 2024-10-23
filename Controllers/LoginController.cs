@@ -30,7 +30,7 @@ namespace API.Controllers
             }
             catch (Exception)
             {
-                return Unauthorized(new { message = "Incorrect e-mail or password" });
+                return Unauthorized(new { message = "Email ou senha incorretos!" });
             }
         }
     }
