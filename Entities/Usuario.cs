@@ -16,6 +16,6 @@ namespace API.Entities
         //UserType
         public string? Tipo { get; set; }
         //Booking
-        public virtual List<Reserva>? Reservas { get; set; }
+        public List<Reserva>? Reservas { get; set; }
     }
 }

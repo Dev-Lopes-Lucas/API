@@ -18,21 +18,14 @@ namespace API.Context
         // a entidade neste caso é tanto uma classe quanto uma tabela no banco de dados.
 
         public DbSet<Cidade> Cidades { get; set; }
-        public DbSet<Contato> Contatos { get; set; }
+
         public DbSet<Espaco> Espacos { get; set; }
-        public DbSet<Proprietario> Proprietarios { get; set; }
         public DbSet<Reserva> Reservas { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
 
 
 
         //Eu que fiz a parte de baixo.
-
-
-
-
-
-
 
         public UsuarioDto Login(LoginDto login)
         {
