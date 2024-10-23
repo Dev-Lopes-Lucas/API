@@ -21,6 +21,7 @@ namespace API.Context
         public DbSet<Espaco> Espacos { get; set; }
         public DbSet<Proprietario> Proprietarios { get; set; }
         public DbSet<Reserva> Reservas { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
     }
 }
