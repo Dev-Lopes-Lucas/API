@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using API.Entities;
+using API.Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Context
@@ -22,6 +23,34 @@ namespace API.Context
         public DbSet<Proprietario> Proprietarios { get; set; }
         public DbSet<Reserva> Reservas { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+
+
+
+        //Eu que fiz a parte de baixo
+
+
+
+
+
+
+
+        public UsuarioDto Login(LoginDto login)
+        {
+            var usuario = Usuarios.FirstOrDefault(u => u.Email == login.Email && u.Senha == login.Senha) ?? throw new Exception("Invalid email or password");
+            return new UsuarioDto
+            {
+                IdUsuario = usuario.IdUsuario,
+                Nome = usuario.Nome,
+                Email = usuario.Email,
+                Senha = usuario.Senha,
+                Tipo = usuario.Tipo
+            };
+        }
+
+
+
+
+
 
     }
 }

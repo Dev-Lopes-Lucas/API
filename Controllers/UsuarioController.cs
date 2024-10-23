@@ -1,6 +1,10 @@
 using API.Context;
 using API.Entities;
+using API.Dto;
+using API.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace API.Controllers
 {
@@ -87,5 +91,7 @@ namespace API.Controllers
             return NoContent();
 
         }
+
+
     }
 }
